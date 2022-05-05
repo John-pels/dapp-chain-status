@@ -1,4 +1,5 @@
-import '../src/styles/_globals.scss'
+import '@src/styles/_globals.scss'
+import '@src/styles/_mixins.scss'
 import type { AppProps } from 'next/app'
 import { Provider } from 'react-redux';
 import { useStore } from 'react-redux';

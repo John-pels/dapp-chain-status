@@ -1,1 +1,1 @@
-export const all = {};
+export { Table } from "./Table";

@@ -2,6 +2,7 @@ html,
 body {
   padding: 0;
   margin: 0;
+  font-size: 16px;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
@@ -13,4 +14,28 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.container {
+  width: 1200px;
+  max-width: 100%;
+  margin: 40px auto 0 auto;
+  border: 1px solid red;
+}
+
+.hero-text {
+  text-align: center;
+}
+
+.status {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+}
+
+.status__red {
+  background: red;
+}
+.status_green {
+  background: green;
 }
