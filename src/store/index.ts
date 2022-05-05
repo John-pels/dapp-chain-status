@@ -7,7 +7,7 @@ import {
   useSelector as useReduxSelector,
   TypedUseSelectorHook,
 } from "react-redux";
-import { rootReducer } from "@store/reducer";
+import { rootReducer } from "@src/store/reducer";
 import { rootSaga } from "./saga";
 
 const isDevelopmentMode: boolean =
