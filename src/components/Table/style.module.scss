@@ -37,16 +37,4 @@
   &__body {
     width: 100%;
   }
-
-  &__img {
-    width: 15%;
-
-    @media (min-width: 840px) and (max-width: 1024px) {
-      width: 15%;
-    }
-
-    @media (max-width: 768px) {
-      width: 85%;
-    }
-  }
 }
