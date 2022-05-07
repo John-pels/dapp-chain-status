@@ -7,7 +7,7 @@ export interface chainState {
   allchainNetworks: Array<chainNetworkTypes>;
 }
 
-type chainNetworkTypes = {
+export type chainNetworkTypes = {
   ss58Format: number;
   tokenDecimals: Array<number>;
   tokenSymbols: Array<string>;

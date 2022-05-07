@@ -1,6 +1,5 @@
-import { all, call, put, select, takeLatest } from "redux-saga/effects";
+import { all, call, put, takeLatest } from "redux-saga/effects";
 import { action as typesafeAction } from "typesafe-actions";
-import { RootState } from "..";
 import { chainService } from "../../services/chain";
 import { ChainStatusTypes } from "../types";
 import { AnyAction } from "redux";
@@ -11,18 +10,16 @@ function* getAllChainsTask(action: AnyAction): any {
   try {
     const response = yield call(chainService.getAllChains);
     if (response && response.data) {
-      const chains = (state: RootState) => state.chains;
-      const allChains: ReturnType<typeof chains> = yield select(chains);
       yield put(
         typesafeAction(
           ChainStatusTypes.GET_ALL_NETWORK_CHAIN_REQUEST_SUCCESS,
-          response?.data || allChains
+          Object.values(response?.data)
         )
       );
       onSuccess?.();
     }
   } catch (error) {
-    onError();
+    onError?.();
     console.log(error);
   }
 }

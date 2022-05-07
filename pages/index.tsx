@@ -1,4 +1,4 @@
-import { HomeContent } from '@src/components/HomeContent'
+import { HomeContent } from '../src/components/HomeContent'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 

@@ -9,6 +9,10 @@ class ChainService extends RequestConfig {
   getAllChains = async () => {
     return await this.api.get(API_ROUTES.GET_ALL_CHAIN_NETWORKS);
   };
+
+  getNetworkStatus = async (name: string) => {
+    return await this.api.get(`${API_ROUTES.GET_NETWORK_STATUS}/${name}`);
+  };
 }
 
 const chainService = new ChainService();
